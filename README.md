@@ -150,3 +150,7 @@ https://wgu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a2f2e10e-6c20-4e16-9
 **H. Sources for content**
 - WGU INFORMATION TECHNOLOGY. (2023, August 8). R or python. Western Governors University. https://www.wgu.edu/online-it-degrees/programming-languages/r-or-python.html
 - WGU - Dr. Elleh's D209 Slide Decks
+
+## Part VII: Post Submission Corrections
+**Corrections**
+After leveraging Claude Sonnet 5.5, it was found that the 94.66% accuracy and 0.927 AUC include target leakage. Reported confusion matrix has 0 false positives, which is the signature of the leak. The R code passes the whole train/test frames to knn(), so Churn_Yes is used as a feature. With the label column dropped, accuracy is 82.2% and AUC is 0.887. The majority-class baseline is 73.8%. That’s still a real lift, but it isn’t 95%.
